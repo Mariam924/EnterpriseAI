@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+
+    <title>jQuery Final Countdown Plugin</title>
+</head>
+
+<body>
+
+    <div class="header ">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="header-logo d-flex justify-center-between align-items-center" id="logo">
+                <div class="logo-img">
+                    <i class="fa fa-solid "></i>
+                </div>
+                <div class="logo-text ">
+                    <h1 class="weather-title">AI</h1>
+                    <small class="weather-desc">tagline goes here</small>
+                </div>
+            </div>
+            <div class="header-ancors">
+                <ul class="menu">
+                    <li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
+                    <li class="menu-item"><a href="#">Details</a></li>
+                    <li class="menu-item"><a href="#">Duration</a></li>
+                    <li class="menu-item me-5"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="mobile-navigation">
+                <button type="button" class="menu-toggle" id="mob-btn">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="text-center menu-div d-block">
+            <ul class="menu" id="mob-menu">
+                <li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
+                <li class="menu-item"><a href="#">Details</a></li>
+                <li class="menu-item"><a href="#">Duration</a></li>
+                <li class="menu-item"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="home" class="start">
+        <div class="container w-85 text-center">
+            <div class="row">
+                <div class="animation d-flex justify-content-between align-items-center">
+                    <div>
+                        <h1>This is Enterprise AI.</h1>
+                        <p>We provide a large and
+                            growing family of turnkey enterprise AI applications.</p>
+                    </div>
+                    <div>
+                        <video id="myVideo" class="w-100" loop="true" autoplay="autoplay" controls muted>
+                            <source src="img/AI visual.mp4" type="video/mp4" autoplay="autoplay">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="details" class="home">
+        <div class="container w-50">
+            <div class="row">
+                <section id="singers" class="text-center">
+                    <h2>Our Comming Events</h2>
+                    <h3>AI and Google Cloud</h3>
+                    <div style="display: block;" id="first" class="open-nav">
+                        <img src="img/transform-2022-video-2 (1).jpg" alt="">
+                        <p>Learn more about how C3 AI and Google Cloud’s partnership can you help you accelerate
+                            enterprise AI across manufacturing, supply chain, and sustainability with the resources
+                            below</p>
+                        <button>Book a ticket</button>
+                    </div>
+
+
+                    <h3>AI at Eurosatory</h3>
+                    <div style="display: none;" class="open-nav">
+                        <img src="img/eurosatory.jpg" alt="">
+                        <p>Enterprise AI software from C3 AI enables agencies to ingest and integrate data from multiple
+                            source systems and implement AI models at scale to rapidly address their most critical
+                            needs.</p>
+                        <button>Book a ticket</button>
+                    </div>
+
+
+                    <h3>AI COVID-19 Grand Challenge</h3>
+                    <div style="display: none;" class="open-nav">
+                        <img src="img/transform-2019-featured-image-1.jpg" alt="">
+                        <p>Participants used the C3 AI COVID-19 Data Lake as one of the key sources of data to produce
+                            new and innovative data science projects that help combat the COVID-19 pandemic.</p>
+                        <button>Book a ticket</button>
+                    </div>
+
+
+                    <h3>AI transform</h3>
+                    <div style="display: none;" class="open-nav">
+                        <img src="img/industry-landing-smart-city.jpg" alt="">
+                        <p>Learn more about how C3 AI and Google Cloud’s partnership can you help you accelerate
+                            enterprise AI across manufacturing, supply chain, and sustainability with the resources
+                            below</p>
+                        <button>Book a ticket</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div class="countdown countdown-container container">
+        <div class="clock row">
+
+            <h2 class="text-center pb-5">Time left for the booked event</h2>
+            <div class="clock-item clock-days countdown-time-value col-sm-6 col-md-3">
+                <div class="wrap">
+                    <div class="inner">
+                        <div id="canvas-days" class="clock-canvas"></div>
+
+                        <div class="text">
+                            <p class="val" id="days">0</p>
+                            <p class="type-days type-time">DAYS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clock-item clock-hours countdown-time-value col-sm-6 col-md-3">
+                <div class="wrap">
+                    <div class="inner">
+                        <div id="canvas-hours" class="clock-canvas"></div>
+
+                        <div class="text">
+                            <p class="val" id="hours">0</p>
+                            <p class="type-hours type-time">HOURS</p>
+                        </div><!-- /.text -->
+                    </div><!-- /.inner -->
+                </div><!-- /.wrap -->
+            </div><!-- /.clock-item -->
+
+            <div class="clock-item clock-minutes countdown-time-value col-sm-6 col-md-3">
+                <div class="wrap">
+                    <div class="inner">
+                        <div id="canvas-minutes" class="clock-canvas"></div>
+
+                        <div class="text">
+                            <p class="val" id="minutes">0</p>
+                            <p class="type-minutes type-time">MINUTES</p>
+                        </div><!-- /.text -->
+                    </div><!-- /.inner -->
+                </div><!-- /.wrap -->
+            </div><!-- /.clock-item -->
+
+            <div class="clock-item clock-seconds countdown-time-value col-sm-6 col-md-3">
+                <div class="wrap">
+                    <div class="inner">
+                        <div id="canvas-seconds" class="clock-canvas"></div>
+
+                        <div class="text">
+                            <p class="val" id="seconds">0</p>
+                            <p class="type-seconds type-time">SECONDS</p>
+                        </div><!-- /.text -->
+                    </div><!-- /.inner -->
+                </div><!-- /.wrap -->
+            </div><!-- /.clock-item -->
+        </div><!-- /.clock -->
+        <div class="layer">
+
+        </div>
+    </div>
+
+    <div class="contact">
+        <div class="get-in-touch">
+            <h1 class="title">Get in touch</h1>
+            <form class="contact-form row">
+                <div class="form-field col-lg-6">
+                    <input id="name" class="input-text js-input" type="text" required>
+                    <label class="label" for="name">Name</label>
+                </div>
+                <div class="form-field col-lg-6 ">
+                    <input id="email" class="input-text js-input" type="email" required>
+                    <label class="label" for="email">E-mail</label>
+                </div>
+                <div class="form-field col-lg-6 ">
+                    <input id="company" class="input-text js-input" type="text" required>
+                    <label class="label" for="company">Company Name</label>
+                </div>
+                <div class="form-field col-lg-6 ">
+                    <input id="phone" class="input-text js-input" type="text" required>
+                    <label class="label" for="phone">Contact Number</label>
+                </div>
+
+
+                <div class="form-field col-lg-12">
+                    <textarea class=" input-text js-input" name="message" rows="5" id="message"></textarea>
+                    <label class="label" for="message">Message</label>
+
+
+                </div>
+                <p><span id="num">100</span> characters available</p>
+
+
+                <div class="form-field col-lg-12">
+                    <input class="submit-btn" type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="copyright-box">
+                        <p class="copyright-txt">© Copyright <span class="fw-bolder">DevFolio</span>. All Rights
+                            Reserved</p>
+                        <div class=""> Designed by <a href="https://bootstrapmade.com/"
+                                class="text-white text-decoration-none">BootstrapMade</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/kinetic.js"></script>
+    <script type="text/javascript" src="../jquery.final-countdown.js"></script>
+
+    <!--     <script type="text/javascript">
+        $('document').ready(function () {
+            'use strict';
+
+            $('.countdown').final_countdown({
+                'start': 1362139200,
+                'end': 1388461320,
+                'now': 1387461319
+            });
+        });
+    </script> -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
