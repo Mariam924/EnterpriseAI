@@ -32,8 +32,8 @@ a, a:hover, a:active, a:focus{
     align-items: center; 
 }
 .header-ancors .menu .menu-item.current-menu-item a, .header-ancors .menu .menu-item:hover a {
-    border-color: #ce036f;
-    color: #ce036f;
+    border-color: rgba(199, 129, 246, 0.968);;
+    color: rgba(199, 129, 246, 0.968);;
    
 }
 .header-ancors .menu .menu-item a {
